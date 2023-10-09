@@ -17,7 +17,7 @@ class _DiffWidgetsInFlutterState extends State<DiffWidgetsInFlutter> {
           firstDate: DateTime(1801),
           lastDate: DateTime(3001));
     }
-    // Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: SafeArea(
           child: Column(

@@ -43,6 +43,7 @@ dependencies:
   drag_and_drop_lists: ^0.3.3
   flutter_reorderable_grid_view: ^4.0.0
   table_calendar: ^3.0.9
+  animated_text_kit: ^4.2.2
 
 dev_dependencies:
   flutter_test:

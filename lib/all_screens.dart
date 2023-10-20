@@ -121,7 +121,7 @@ class _AllScreensState extends State<AllScreens> {
             },
           ),
           ListTile(
-            title: const Text('  Demo'),
+            title: const Text('Demo'),
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(

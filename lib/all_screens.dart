@@ -1,6 +1,4 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:getxdmo/Charts/cartesion_chart.dart';
 import 'package:getxdmo/Charts/chartstype.dart';
 import 'package:getxdmo/Example_3_getx.dart';
 import 'package:getxdmo/demo.dart';
@@ -16,9 +14,7 @@ import 'package:getxdmo/markfavlist.dart';
 import 'package:getxdmo/screen1.dart';
 import 'package:getxdmo/screen2.dart';
 import 'package:getxdmo/screen3.dart';
-
 import 'drag_and_drop_list.dart';
-import 'encrypt.dart';
 
 class AllScreens extends StatefulWidget {
   const AllScreens({Key? key}) : super(key: key);

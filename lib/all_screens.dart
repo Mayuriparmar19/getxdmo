@@ -7,6 +7,7 @@ import 'package:getxdmo/demo.dart';
 import 'package:getxdmo/diffwidgets.dart';
 import 'package:getxdmo/dismissible_class_demo.dart';
 import 'package:getxdmo/drag_and_drop_widget.dart';
+import 'package:getxdmo/file_picker_demo.dart';
 import 'package:getxdmo/getapiwithgetx.dart';
 import 'package:getxdmo/home.dart';
 import 'package:getxdmo/imagepickergetx.dart';
@@ -153,6 +154,14 @@ class _AllScreensState extends State<AllScreens> {
             onTap: () {
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => const DemoApp()));
+            },
+          ),
+          ListTile(
+            title: const Text('File Picker'),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const FilePickerDemo()));
             },
           ),
         ],

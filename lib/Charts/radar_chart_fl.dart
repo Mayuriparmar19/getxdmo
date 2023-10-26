@@ -13,14 +13,29 @@ class _RadarChartFLState extends State<RadarChartFL> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
-         title: const Text('Radar Chart'),
-         leading: IconButton(onPressed: (){},icon: const Icon(CupertinoIcons.back),) ,
-       ),
+      appBar: AppBar(
+        title: const Text('Radar Chart'),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(CupertinoIcons.back),
+        ),
+      ),
       body: RadarChart(
-          RadarChartData(
-
-      )),
+          swapAnimationDuration: const Duration(milliseconds: 1000),
+          swapAnimationCurve: Curves.linear,
+          RadarChartData(dataSets: [
+            RadarDataSet(
+                entryRadius: 5,
+                borderWidth: 1,
+                borderColor: Colors.black,
+                dataEntries: [
+                  const RadarEntry(value: 6),
+                  const RadarEntry(value: 2),
+                  const RadarEntry(value: 4),
+                ])
+          ])),
     );
   }
 }

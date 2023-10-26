@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:getxdmo/Charts/line_chart_fl.dart';
 import 'package:getxdmo/Charts/pie_chart_fl.dart';
-import 'package:getxdmo/Charts/rada_chart_fl.dart';
+import 'package:getxdmo/Charts/scatter_chart_fl.dart';
 
 import 'Charts/bar_chart_fl.dart';
+import 'Charts/radar_chart_fl.dart';
 
 class FlChartsDemo extends StatefulWidget {
   const FlChartsDemo({Key? key}) : super(key: key);
@@ -58,6 +59,14 @@ class _FlChartsDemoState extends State<FlChartsDemo> {
             onTap: () {
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => const RadarChartFL()));
+            },
+          ),
+          ListTile(
+            title: const Text('Scatter Chart'),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const ScatterChartFL()));
             },
           ),
         ],

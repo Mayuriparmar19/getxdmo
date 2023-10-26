@@ -8,6 +8,8 @@ import 'package:getxdmo/drag_and_drop_widget.dart';
 import 'package:getxdmo/file_picker_demo.dart';
 import 'package:getxdmo/fl_charts_demo.dart';
 import 'package:getxdmo/getapiwithgetx.dart';
+import 'package:getxdmo/hive/hive_database_demo.dart';
+import 'package:getxdmo/hive/user_data_hive.dart';
 import 'package:getxdmo/home.dart';
 import 'package:getxdmo/imagepickergetx.dart';
 import 'package:getxdmo/index.dart';
@@ -167,6 +169,22 @@ class _AllScreensState extends State<AllScreens> {
             onTap: () {
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => const FlChartsDemo()));
+            },
+          ),
+          ListTile(
+            title: const Text('Hive '),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const HiveDatabaseDemo()));
+            },
+          ),
+          ListTile(
+            title: const Text(' Notes Hive '),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const NotesAppHive()));
             },
           ),
         ],

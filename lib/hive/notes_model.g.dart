@@ -18,7 +18,7 @@ class MyModelAdapter extends TypeAdapter<MyModel> {
     };
     return MyModel(
       title: fields[0] as String,
-      des: fields[1] as String,
+      description: fields[1] as String,
     );
   }
 
@@ -29,7 +29,7 @@ class MyModelAdapter extends TypeAdapter<MyModel> {
       ..writeByte(0)
       ..write(obj.title)
       ..writeByte(1)
-      ..write(obj.des);
+      ..write(obj.description);
   }
 
   @override

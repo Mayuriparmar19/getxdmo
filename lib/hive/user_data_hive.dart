@@ -52,6 +52,10 @@ class _NotesAppHiveState extends State<NotesAppHive> {
                       children: [
                         Row(
                           children: [
+
+                            const SizedBox(
+                              height: 10,
+                            ),
                             Text(
                               data[index].title.toString(),
                               style: const TextStyle(
@@ -160,10 +164,6 @@ class _NotesAppHiveState extends State<NotesAppHive> {
                         description: descriptionController.text);
                     final box = Boxes.getData();
                     box.add(data);
-                    // if(kDebugMode){
-                    //   print(title.text);
-                    //   print(desc.text);
-                    // }
                     data.save();
                     titleController.clear();
                     descriptionController.clear();

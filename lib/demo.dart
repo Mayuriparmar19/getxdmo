@@ -32,7 +32,8 @@ class DemoApp extends StatelessWidget {
                 WavyAnimatedText('Wavy Text',
                     textStyle: const TextStyle(fontSize: 50),speed: const Duration(milliseconds:1000 )),
                 RotateAnimatedText('Rotate Text',
-                    textStyle: const TextStyle(fontSize: 50),duration: const Duration(milliseconds: 1000))
+                    textStyle: const TextStyle(fontSize: 50),duration: const Duration(milliseconds: 1000)),
+                FadeAnimatedText('Fade Animated Text',textStyle: const TextStyle(fontSize: 50,fontWeight: FontWeight.bold),duration:const  Duration(milliseconds: 1000))
               ],
             ),
           ),

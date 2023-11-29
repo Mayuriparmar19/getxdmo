@@ -9,7 +9,6 @@ class DiffWidgetsInFlutter extends StatefulWidget {
 }
 
 class _DiffWidgetsInFlutterState extends State<DiffWidgetsInFlutter> {
-
   @override
   Widget build(BuildContext context) {
     void showDate() {
@@ -23,8 +22,9 @@ class _DiffWidgetsInFlutterState extends State<DiffWidgetsInFlutter> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: SafeArea(
-      child:GridView(
-        gridDelegate:const  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+      child: GridView(
+        gridDelegate:
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
         children: [
           ElevatedButton(
             onPressed: () {
@@ -62,7 +62,6 @@ class _DiffWidgetsInFlutterState extends State<DiffWidgetsInFlutter> {
             size: 20,
             duration: Duration(milliseconds: 3000),
           ),
-
           const SpinKitFadingFour(
             color: Colors.pinkAccent,
             size: 20,
@@ -78,7 +77,36 @@ class _DiffWidgetsInFlutterState extends State<DiffWidgetsInFlutter> {
             size: 20,
             duration: Duration(milliseconds: 3000),
           ),
-         const  SpinKitFoldingCube( color: Colors.deepPurple,duration: Duration(milliseconds: 3000),size: 20,)
+          const SpinKitFoldingCube(
+            color: Colors.deepPurple,
+            duration: Duration(milliseconds: 3000),
+            size: 20,
+          ),
+          const SpinKitDancingSquare(
+            color: Colors.tealAccent,
+            duration: Duration(milliseconds: 3000),
+            size: 20,
+          ),
+          const SpinKitChasingDots(
+            color: Colors.purpleAccent,
+            duration: Duration(milliseconds: 300),
+            size: 20,
+          ),
+          const SpinKitPianoWave(
+            color: Colors.red,
+            duration: Duration(milliseconds: 3000),
+            size: 20,
+          ),
+          const SpinKitDoubleBounce(
+            color: Colors.greenAccent,
+            duration: Duration(milliseconds: 3000),
+            size: 20,
+          ),
+          const SpinKitChasingDots(
+            color: Colors.yellowAccent,
+            duration: Duration(milliseconds: 3000),
+            size: 20,
+          )
         ],
       ),
     ));

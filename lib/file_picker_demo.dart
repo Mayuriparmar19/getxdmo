@@ -3,6 +3,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class FilePickerDemo extends StatefulWidget {
   const FilePickerDemo({super.key});
@@ -18,25 +19,32 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
       PlatformFile platformFile = resultFile.files.first;
       if (kDebugMode) {
         print(platformFile.size.toString());
-      }
-      if (kDebugMode) {
-        print(platformFile.name);
-      }
-      if (kDebugMode) {
         print(platformFile.path);
-      }
-      if (kDebugMode) {
         print(platformFile.extension);
-      }
-      if (kDebugMode) {
-        print(platformFile.bytes);
-      }
-      if (kDebugMode) {
         print(platformFile.identifier);
-      }
-      if (kDebugMode) {
+        print(platformFile.bytes);
         print(platformFile.readStream);
+        print(platformFile.reactive);
+        print(platformFile.toString());
       }
+      // if (kDebugMode) {
+      //   print(platformFile.name);
+      // }
+      // if (kDebugMode) {
+      //   print(platformFile.path);
+      // }
+      // if (kDebugMode) {
+      //   print(platformFile.extension);
+      // }
+      // if (kDebugMode) {
+      //   print(platformFile.bytes);
+      // }
+      // if (kDebugMode) {
+      //   print(platformFile.identifier);
+      // }
+      // if (kDebugMode) {
+      //   print(platformFile.readStream);
+      // }
     } else {
       if (kDebugMode) {
         print('file is not selected');
@@ -49,6 +57,7 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
       PlatformFile platformFile = result.files.single;
       if (kDebugMode) {
         print(platformFile.name);
+        print(platformFile.size);
       }
     }
     else {
@@ -59,7 +68,7 @@ class _FilePickerDemoState extends State<FilePickerDemo> {
   }
   Future<void> specificExtension()async{
     FilePickerResult? res = await FilePicker.platform.pickFiles(type:  FileType.custom,
-    allowedExtensions: ['jpg','png','pdf','docx']
+    allowedExtensions: ['jpg','png','pdf','docx','png']
     );
     if(res!= null){
       PlatformFile platformFiles =  res.files.first;

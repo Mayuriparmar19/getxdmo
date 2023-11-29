@@ -34,6 +34,7 @@ class _LiveChartDemoState extends State<LiveChartDemo> {
       LiveChartData(7, 70),
       LiveChartData(8, 15),
       LiveChartData(9, 09),
+
     ];
   }
 
@@ -67,6 +68,7 @@ class _LiveChartDemoState extends State<LiveChartDemo> {
               height: 400,
               margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
               child: SfCartesianChart(
+                borderColor:const Color(0xff000000),
                 backgroundColor: Colors.grey.shade200,
                 title: ChartTitle(text: 'Time & Speed Chart'),
                 series: <LineSeries<LiveChartData, int>>[
